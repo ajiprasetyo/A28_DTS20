@@ -135,18 +135,33 @@ nav ul li a:hover {
   position: absolute;
   font-size: 40px;
   font-weight: bolder;
-  top: 50%;
-  left: 50%;
+  animation-name: hanim;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
   transform: translate(-50%, -50%);
+}
+
+@keyframes hanim {
+  from {top: 0; left: 50%;}
+  to {top: 50%; left: 50%;}
 }
 
 .carousel-caption p {
   position: absolute;
   font-size: 18px;
-  top: 60%;
-  left: 50%;
+  animation-name: panim;
+  animation-duration: 0.5s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
   transform: translate(-50%, -50%);
 }
+
+@keyframes panim {
+  from {top: 60%; left: 0;}
+  to {top: 60%; left: 50%;}
+}
+
 
 .btn {
   width: 150px;
