@@ -111,29 +111,30 @@ nav ul li a:hover {
 
 /* Carousel */
 
-.carousel-container {
-  display: flex;
-  text-align: center;
-  margin: 0 auto;
-  z-index: -2;
-}
-
-.carousel-item img {
+.carousel-item {
+  color: #f7f7ff;
+  background-image: url('../img/bg-banner.jpg');
+  background-color: #386fc9;
+  background-size: cover;
   width: 100vw;
   height: 100vh;
-  opacity: 0.5;
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: -5;
 }
 
-.carousel-item {
-  color: #3a3a3a;
-}
-
-.carousel-caption h1 {
+.carousel-item h1 {
   position: absolute;
   font-size: 40px;
+  top: 0;
+  left: 0;
+  opacity: 1;
   animation-name: hanim;
   animation-duration: 1s;
   animation-delay: 0.5s;
@@ -152,10 +153,13 @@ nav ul li a:hover {
   }
 }
 
-.carousel-caption p {
+.carousel-item p {
   position: absolute;
+  width: 50%;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
+  top: 60%;
+  left: -100%;
   animation-name: panim;
   animation-duration: 1s;
   animation-delay: 2s;
@@ -181,17 +185,15 @@ nav ul li a:hover {
   font-family: "Roboto", sans-serif;
   border-radius: 30px;
   border-style: hidden;
-  background-color: #003994;
+  background-color: #3672d1;
   color: rgb(240, 246, 255);
   cursor: pointer;
 }
 
-.carousel-caption .btn {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+.carousel-item .btn {
+  position: relative;
+  top: 20%;  
+  box-shadow: 0px 5px #255db6;
   animation-name: btnanim;
   animation-duration: 0.5s;
   animation-delay: 3.5s;
@@ -208,12 +210,22 @@ nav ul li a:hover {
   }
 }
 
-.carousel-caption .btn:hover {
-  background-color: #2462c5;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.carousel-item .btn:hover {
+  background-color: #3361A9;
+  box-shadow: 0px 5px rgb(35, 79, 148);
 }
 
+.carousel-item .btn:active {
+  box-shadow: none;
+  position: relative;
+  top: 21%;
+  box-shadow: none;
+}
 /* card service  */
+.card-container {
+  width: 100%;
+  height: 100%;
+}
 .card-section-title {
   display: flex;
   flex-direction: column;
@@ -223,7 +235,7 @@ nav ul li a:hover {
 
 .card-section-title h2 {
   font-size: 36px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #3a3a3a;
 }
 
@@ -299,6 +311,7 @@ nav ul li a:hover {
 }
 
 .team-title p {
+  width: 50%;
   color: #3a3a3a;
 }
 
@@ -355,7 +368,7 @@ nav ul li a:hover {
 
 .section-title {
   font-size: 36px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   color: rgb(240, 246, 255);
 }
 
@@ -440,7 +453,7 @@ nav ul li a:hover {
     height: 100%;
   }
 
-  .carousel-caption h1 {
+  .carousel-item h1 {
     position: absolute;
     width: 100%;
     font-size: 28px;
@@ -464,7 +477,7 @@ nav ul li a:hover {
     }
   } */
 
-  .carousel-caption p {
+  .carousel-item p {
     position: absolute;
     font-size: 16px;
     width: 100%;
@@ -488,8 +501,8 @@ nav ul li a:hover {
     }
   } */
 
-  .carousel-caption .btn {
-    display: none;
+  .carousel-item .btn {
+    width: 50%;
   }
 
   .section-description {
@@ -553,7 +566,7 @@ nav ul li a:hover {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .carousel-caption h1 {
+  .carousel-item h1 {
     position: absolute;
     font-size: 28px;
     top: 0;
@@ -576,7 +589,7 @@ nav ul li a:hover {
     }
   }
 
-  .carousel-caption p {
+  .carousel-item p {
     position: absolute;
     font-size: 16px;
     top: 0;
@@ -599,7 +612,7 @@ nav ul li a:hover {
     }
   }
 
-  .carousel-caption .btn {
+  .carousel-item .btn {
     top: 60%;
     left: 50%;
   }
