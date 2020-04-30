@@ -10,7 +10,6 @@ html {
 
 body {
   font-family: "Roboto", sans-serif;
-
   overflow-x: hidden;
 }
 
@@ -32,7 +31,7 @@ nav {
   height: 50px;
   align-items: center;
   background-color: #003994;
-  color: #fff;
+  color: rgb(240, 246, 255);
   z-index: 10;
 }
 
@@ -53,7 +52,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #fff;
+  color: rgb(240, 246, 255);
   text-decoration: none;
 }
 
@@ -96,12 +95,12 @@ nav ul li a:hover {
 }
 
 .menu-toggle input:checked ~ span:nth-child(2) {
-  background-color: #fff;
+  background-color: rgb(240, 246, 255);
   transform: rotate(45deg) translate(-1px, 0);
 }
 
 .menu-toggle input:checked ~ span:nth-child(4) {
-  background-color: #fff;
+  background-color: rgb(240, 246, 255);
   transform: rotate(-45deg) translate(-2px, 0);
 }
 
@@ -120,31 +119,37 @@ nav ul li a:hover {
 }
 
 .carousel-item img {
-  width: 100%;
-  height: auto;
-  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  object-fit: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
 
 .carousel-item {
-  color: #e3ebfa;
+  color: #3a3a3a;
 }
 
 .carousel-caption h1 {
   position: absolute;
   font-size: 40px;
-  font-weight: bolder;
   animation-name: hanim;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
   transform: translate(-50%, -50%);
 }
 
 @keyframes hanim {
-  from {top: 0; left: 50%;}
-  to {top: 50%; left: 50%;}
+  from {
+    top: 0;
+    left: 50%;
+  }
+  to {
+    top: 45%;
+    left: 50%;
+  }
 }
 
 .carousel-caption p {
@@ -152,26 +157,32 @@ nav ul li a:hover {
   font-size: 18px;
   font-weight: 300;
   animation-name: panim;
-  animation-duration: 0.5s;
-  animation-delay: 1s;
+  animation-duration: 1s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
   transform: translate(-50%, -50%);
 }
 
 @keyframes panim {
-  from {top: 60%; left: 0;}
-  to {top: 60%; left: 50%;}
+  from {
+    top: 60%;
+    left: 0;
+  }
+  to {
+    top: 60%;
+    left: 50%;
+  }
 }
-
 
 .btn {
   width: 150px;
   height: 40px;
   font-size: 16px;
+  font-family: "Roboto", sans-serif;
   border-radius: 30px;
   border-style: hidden;
   background-color: #003994;
-  color: #fff;
+  color: rgb(240, 246, 255);
   cursor: pointer;
 }
 
@@ -180,17 +191,21 @@ nav ul li a:hover {
   top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 0px 0px 5px 0px rgba(168, 157, 157, 0.31);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
   animation-name: btnanim;
   animation-duration: 0.5s;
-  animation-delay: 2s;
+  animation-delay: 3.5s;
   animation-fill-mode: forwards;
-  opacity: 0; 
+  opacity: 0;
 }
 
 @keyframes btnanim {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .carousel-caption .btn:hover {
@@ -199,16 +214,21 @@ nav ul li a:hover {
 }
 
 /* card service  */
-.section-title {
+.card-section-title {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 30px 0 30px 0;
 }
 
-.section-title h2 {
+.card-section-title h2 {
   font-size: 36px;
   margin-bottom: 20px;
+  color: #3a3a3a;
+}
+
+.card-section-title p {
+  color: #3a3a3a;
 }
 
 .card-content {
@@ -222,18 +242,32 @@ nav ul li a:hover {
 
 .card-item {
   width: 250px;
-  height: auto;
+  height: 300px;
   margin: 10px;
-  color: rgb(27, 27, 27);
+  color: #3a3a3a;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 6px;
   transition: box-shadow 0.5s;
   border: 1px solid #eee;
   box-shadow: 0px 0px 5px 0px rgba(168, 157, 157, 0.31);
 }
+.card-description {
+  padding: 10px;
+  text-align: center;
+  color: rgb(80, 80, 80);
+}
+
+.card-caption .btn {
+  margin-top: 10px;
+}
+
+.card-caption .btn:hover {
+  background-color: #2462c5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
+}
 
 .card-item:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 30px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Team content */
@@ -251,22 +285,28 @@ nav ul li a:hover {
 }
 
 .team-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin: 50px 0;
+  margin: 30px 0;
 }
 
 .team-title h2 {
   font-size: 36px;
-  margin: 30px 0;
+  color: #3a3a3a;
+}
+
+.team-title p {
+  color: #3a3a3a;
 }
 
 .team-content {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid black; */
   position: relative;
   align-items: center;
-  margin: 0 10px;
 }
 
 .team-pic img {
@@ -295,48 +335,48 @@ nav ul li a:hover {
 .team-name {
   padding: 15px 0;
 }
-.team-caption p {
+
+.team-caption {
   line-height: 20px;
+  color: #3a3a3a;
 }
 
 /* We are creative digital*/
-.amazing-title {
-  background-color: #3361A9;
-  color: #fff;
+.section-one {
+  background-color: #3361a9;
   width: 100%;
   height: 300px;
-  text-align: justify;
-  opacity: 80%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.judul {
+.section-title {
   font-size: 36px;
-  font-style: normal;
-  padding-top: 40px;
-  margin-bottom: 30px;
+  padding-bottom: 20px;
+  color: rgb(240, 246, 255);
 }
 
-.deskripsi {
-  display: inline-block;
+.section-description {
   width: 50%;
   font-size: 16px;
-  padding: 0.1px 20px;
+  color: rgb(193, 216, 255);
 }
 
-.amazing-title .btn {
+.section-one .btn {
   margin: 20px 0;
   background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid rgb(240, 246, 255);
+  color: rgb(240, 246, 255);
   transition: all 0.5s;
 }
 
-.amazing-title .btn:hover {
+.section-one .btn:hover {
   margin: 20px 0;
-  background-color: #fff;
-  border: 2px solid #386fc9;
-  color: #003994;
+  background-color: rgb(240, 246, 255);
+  color: #386fc9;
 }
 /* End We are creative digital*/
 
@@ -345,27 +385,20 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #003994;
-  color: #fffff8;
-  height: 300px;
-}
-
-.footer-content {
+  justify-content: center;
   text-align: center;
-  margin: 50px 0;
-}
-
-.footer-container img {
-  width: 200px;
-  height: 70px;
+  background-color: #003994;
+  height: 200px;
 }
 
 .copy-right {
   opacity: 0.5;
   font-size: 14px;
-  margin: 50px 0;
+  padding-top: 10px;
+  color: rgb(193, 216, 255);
 }
 /* End Footer */
+
 /* Responsive Breakpoint */
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -395,33 +428,73 @@ nav ul li a:hover {
     transform: translate(0);
   }
 
+  .carousel-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+  }
+
   .carousel-item img {
-    height: 300px;
+    width: 100%;
+    height: 100%;
   }
 
   .carousel-caption h1 {
-    font-size: 24px;
-    top: 100px;
-    left: 50%;
-    animation: none;
+    position: absolute;
+    width: 100%;
+    font-size: 28px;
+    /* top: 0;
+    left: 0;
+    animation: hanim;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards; */
     transform: translate(-50%, -50%);
   }
 
+  /* @keyframes hanim {
+    from {
+      top: 0;
+      left: 50%;
+    }
+    to {
+      top: 20%;
+      left: 50%;
+    }
+  } */
+
   .carousel-caption p {
-    font-size: 14px;
-    top: 200px;
-    left: 50%;
-    width: 80%;
-    animation: none;
+    position: absolute;
+    font-size: 16px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    /* animation-name: panim;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards; */
     transform: translate(-50%, -50%);
   }
+
+  /* @keyframes panim {
+    from {
+      top: 30%;
+      left: 0;
+    }
+    to {
+      top: 30%;
+      left: 50%;
+    }
+  } */
 
   .carousel-caption .btn {
     display: none;
   }
 
-  .deskripsi {
-    width: 100%;
+  .section-description {
+    text-align: center;
+    width: 90%;
   }
 
   .team-title h2 {
@@ -432,8 +505,42 @@ nav ul li a:hover {
     font-size: 24px;
   }
 
-  .judul {
+  .card-section-title h2 {
     font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .card-section-title p {
+    font-size: 16px;
+  }
+
+  .section-one .btn {
+    margin: 10px 0;
+    width: 80%;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid rgb(240, 246, 255);
+    color: rgb(240, 246, 255);
+    transition: all 0.5s;
+  }
+
+  .section-one .btn:hover {
+    margin: 10px 0;
+    background-color: rgb(240, 246, 255);
+    color: #386fc9;
+  }
+
+  .team-name {
+    font-size: 16px;
+  }
+
+  .team-caption h3 {
+    font-size: 20px;
+  }
+
+  .team-caption p {
+    font-size: 16px;
+    font-weight: 400;
   }
 }
 
@@ -449,29 +556,54 @@ nav ul li a:hover {
   .carousel-caption h1 {
     position: absolute;
     font-size: 28px;
-    font-weight: bolder;
-    top: 200px;
-    left: 50%;
-    animation: none;
+    top: 0;
+    left: 0;
+    animation: hanim;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
     transform: translate(-50%, -50%);
+  }
+
+  @keyframes hanim {
+    from {
+      top: 0;
+      left: 50%;
+    }
+    to {
+      top: 40%;
+      left: 50%;
+    }
   }
 
   .carousel-caption p {
     position: absolute;
     font-size: 16px;
-    top: 300px;
-    left: 50%;
-    animation: none;
+    top: 0;
+    left: 0;
+    animation-name: panim;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
     transform: translate(-50%, -50%);
   }
 
-  .carousel-caption .btn {
-    display: none;
+  @keyframes panim {
+    from {
+      top: 50%;
+      left: 0;
+    }
+    to {
+      top: 50%;
+      left: 50%;
+    }
   }
 
-  .deskripsi {
-    width: 100%;
+  .carousel-caption .btn {
+    top: 60%;
+    left: 50%;
   }
+  
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
